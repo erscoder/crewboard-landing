@@ -64,10 +64,9 @@ Dark, modern landing inspired by Linear/Vercel/Raycast. Built for desktop-first 
 ### 4) Pricing
 - **Toggle:** pill switch for `Monthly / Annual (save 20%)`, defaults to Annual. Uses cyan accent; animates thumb.  
 - **Cards:** Four tiers in 2x2 on desktop, carousel on mobile.  
-  - Free — $0 — “Solo experiments” — limits: 2 projects, 3 agents, community support.  
-  - Pro — $29/mo — “For builders” — 10 projects, 10 agents, GitHub/Slack, basic automations.  
-  - Team — $79/mo — “Product squads” — unlimited projects, 30 agents, SSO, audit log, priority support.  
-  - Enterprise — “Talk to us” — custom, on-prem/SOC2, VPC peering, dedicated CSM.  
+  - Free — $0 — “Solo experiments” — limits: 1 project, 2 agents, community support.  
+  - Pro — $29/mo — “For builders” — 3 projects, 4 agents, GitHub/Slack, basic automations.  
+  - Team — $79/mo — “Product squads” — unlimited projects, All available agents, SSO, audit log, priority support.  
 - **Comparison Table:** Sticky header, zebra rows. Columns match tiers; rows: Projects, Agents, Integrations (GitHub/Slack/Jira soon), Automations, Support, Security (SOC2, SSO, RBAC), Data retention. Checkmarks purple; dashes muted.  
 - CTA buttons per card: Free/Pro/Team “Start Free” (or “Start Trial”), Enterprise “Book Call” ghost cyan.  
 - Badge: “Most popular” chip on Pro.
