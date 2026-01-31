@@ -38,8 +38,8 @@ const plans: Plan[] = [
   {
     name: "Pro",
     tagline: "For builders",
-    monthly: 29,
-    annual: 23,
+    monthly: 29.99,
+    annual: 23.99,
     tasks: "3 projects · 2 agents per project",
     features: [
       "3 projects", 
@@ -54,8 +54,8 @@ const plans: Plan[] = [
   {
     name: "Team",
     tagline: "Product squads",
-    monthly: 79,
-    annual: 63,
+    monthly: 79.99,
+    annual: 63.99,
     tasks: "Unlimited projects · All agents",
     features: [
       "Unlimited projects",
@@ -108,7 +108,7 @@ export function Pricing() {
   const priceForPlan = (plan: Plan) => {
     if (plan.monthly === null || plan.annual === null) return "Custom";
     const value = billing === "annual" ? plan.annual ?? Math.round((plan.monthly ?? 0) * 0.8) : plan.monthly;
-    return `$${value}`;
+    return `€${value}`;
   };
 
   return (
