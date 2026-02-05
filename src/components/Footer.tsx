@@ -29,7 +29,7 @@ export function Footer() {
       const formData = new FormData();
       formData.append("email", email);
       
-      await fetch("https://script.google.com/macros/s/AKfycbwoisJv-8i7qPYwnsOO_k1u-MqmUrfuXBmnuhAoYn5e8hLLSqzdZngV3CWJO872iya__A/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbzGGtX9ezc-EZIg2epbLeF-8vIJdS6NzUWy4lMqpGsQAELxxLvCAZS1SfL8NmJaBLr3/exec", {
         method: "POST",
         mode: "no-cors",
         body: formData,
