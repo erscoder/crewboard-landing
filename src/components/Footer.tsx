@@ -26,18 +26,18 @@ export function Footer() {
     
     setStatus("loading");
     try {
-      // Use FormData for better compatibility with Google Apps Script
-      const formData = new FormData();
-      formData.append("email", email);
-      
-      await fetch("https://script.google.com/macros/s/AKfycbzaDEaA8WKSjMI5u3Tk1eyxJQ7LjDbLPTbyvL67gDSdPkrd-4gs_l5yAnLlQ8if83vHfw/exec", {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
-        mode: "no-cors",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
       });
-      // With no-cors we can't read response, assume success
-      setStatus("success");
-      setEmail("");
+      
+      if (res.ok) {
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
