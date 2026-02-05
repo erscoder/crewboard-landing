@@ -56,6 +56,18 @@ const icons = {
       <path d="M12 14h2.5A2.5 2.5 0 1 1 12 16.5Z" />
     </svg>
   ),
+  telegram: (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-7 w-7"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+    >
+      <path d="M22 2L11 13" />
+      <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+    </svg>
+  ),
 };
 
 const features: Feature[] = [
@@ -127,6 +139,36 @@ const features: Feature[] = [
       </div>
     ),
   },
+  {
+    title: "Telegram Voice Commands",
+    description: "Talk to your agents with voice messages. Send tasks, get updates, and manage projects hands-free from anywhere.",
+    icon: icons.telegram,
+    accent: "from-sky-400/25 to-blue-500/25",
+    detail: (
+      <div className="w-full rounded-lg border border-white/10 bg-slate-900/70 p-3 text-sm text-slate-100 shadow-inner">
+        <div className="flex items-center gap-2 text-xs text-sky-200">
+          <span className="h-2 w-2 rounded-full bg-sky-400" />
+          Voice message
+        </div>
+        <div className="mt-2 flex items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/20">
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+              <line x1="12" y1="19" x2="12" y2="23" />
+            </svg>
+          </div>
+          <div className="flex-1 space-y-1">
+            <div className="h-1.5 w-full rounded-full bg-sky-500/30">
+              <div className="h-full w-3/4 rounded-full bg-sky-400" />
+            </div>
+            <p className="text-[11px] text-slate-400">0:04 / 0:05</p>
+          </div>
+        </div>
+        <p className="mt-2 text-xs text-slate-300">"Create a new task for Alex: fix the login bug"</p>
+      </div>
+    ),
+  },
 ];
 
 export function Features() {
@@ -148,7 +190,7 @@ export function Features() {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}

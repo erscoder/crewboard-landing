@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name=crewboard-landing --commit-dirty=true",
+    "subscribers": "npx wrangler kv key list --namespace-id=1e838f620df344b88f6660ed4778273d",
+    "subscribers:export": "npx wrangler kv key list --namespace-id=1e838f620df344b88f6660ed4778273d --json"
   },
   "dependencies": {
     "framer-motion": "^12.29.2",

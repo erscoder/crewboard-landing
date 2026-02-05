@@ -5,6 +5,7 @@ import { Hero } from "@/components/Hero";
 import { Header } from "@/components/Header";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Pricing } from "@/components/Pricing";
+import { Team } from "@/components/Team";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
+        <Team />
         <HowItWorks />
         <Pricing />
         <FAQ />

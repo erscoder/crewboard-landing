@@ -24,60 +24,75 @@ type ComparisonRow = {
 const plans: Plan[] = [
   {
     name: "Free",
-    tagline: "Solo experiments",
+    tagline: "Try it out",
     monthly: 0,
     annual: 0,
-    tasks: "1 project · 1 agents",
+    tasks: "1 project · 1 agent · 20 tasks/mo",
     features: [
-      "BYOK (own API key)", 
-      "1 project", "1 agents", 
-      "GitHub & Slack", 
-      "Community support"],
+      "1 project",
+      "1 agent",
+      "20 tasks per month",
+      "Community support",
+    ],
     cta: "Start free",
   },
   {
     name: "Pro",
-    tagline: "For builders",
-    monthly: 29.99,
-    annual: 23.99,
-    tasks: "3 projects · 2 agents per project",
+    tagline: "For developers",
+    monthly: 49,
+    annual: 39,
+    tasks: "2 projects · 3 agents · 200 tasks/mo",
     features: [
-      "3 projects", 
-      "2 agents per project", 
-      "Analytics & insights", 
-      "GitHub & Slack", 
-      "Priority queue",
+      "2 projects",
+      "3 agents per project",
+      "GitHub & Slack",
+      "Analytics dashboard",
+      "Email support",
     ],
-    cta: "Start trial",
+    cta: "Get Pro",
     popular: true,
   },
   {
     name: "Team",
-    tagline: "Product squads",
-    monthly: 79.99,
-    annual: 63.99,
-    tasks: "Unlimited projects · All agents",
+    tagline: "For growing teams",
+    monthly: 99,
+    annual: 79,
+    tasks: "Unlimited projects · All agents · 500 tasks/mo",
     features: [
       "Unlimited projects",
       "All available agents",
-      "Analytics & insights", 
-      "GitHub & Slack", 
+      "GitHub, Slack & Telegram",
+      "Advanced analytics",
       "Priority support",
     ],
-    cta: "Start trial",
+    cta: "Get Team",
+  },
+  {
+    name: "Business",
+    tagline: "For enterprises",
+    monthly: 199,
+    annual: 159,
+    tasks: "Unlimited everything",
+    features: [
+      "Unlimited projects",
+      "All available agents",
+      "Unlimited tasks",
+      "Priority response time",
+      "Dedicated support",
+    ],
+    cta: "Contact sales",
   },
 ];
 
 const comparison: ComparisonRow[] = [
-  { label: "Projects", values: ["1", "3", "Unlimited"] },
-  { label: "Agents", values: ["2", "4", "All agents"] },
-  { label: "Analytics", values: ["dash", "check", "check"] },
-  { label: "Priority queue", values: ["dash", "check", "check"] },
-  { label: "Collaboration", values: ["dash", "dash", "check"] },
-  { label: "Roles & permissions", values: ["dash", "dash", "check"] },
-  { label: "History / audit log", values: ["dash", "dash", "check"] },
-  { label: "SSO & RBAC", values: ["dash", "dash", "check"] },
-  { label: "Support", values: ["Community", "Standard", "Priority"] },
+  { label: "Projects", values: ["1", "2", "Unlimited", "Unlimited"] },
+  { label: "Agents per project", values: ["1", "3", "All agents", "All agents"] },
+  { label: "Tasks per month", values: ["20", "200", "500", "Unlimited"] },
+  { label: "Analytics", values: ["dash", "check", "check", "check"] },
+  { label: "GitHub & Slack", values: ["dash", "check", "check", "check"] },
+  { label: "Telegram bot", values: ["dash", "dash", "check", "check"] },
+  { label: "Priority response", values: ["dash", "dash", "dash", "check"] },
+  { label: "Support", values: ["Community", "Email", "Priority", "Dedicated"] },
 ];
 
 const CheckIcon = () => (
@@ -108,7 +123,7 @@ export function Pricing() {
   const priceForPlan = (plan: Plan) => {
     if (plan.monthly === null || plan.annual === null) return "Custom";
     const value = billing === "annual" ? plan.annual ?? Math.round((plan.monthly ?? 0) * 0.8) : plan.monthly;
-    return `€${value}`;
+    return `$${value}`;
   };
 
   return (
@@ -147,21 +162,21 @@ export function Pricing() {
           <p className="text-sm text-slate-400">{savingsLabel}</p>
         </div>
 
-        <div className="flex items-stretch gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:snap-none">
+        <div className="flex items-stretch gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-4 md:gap-5 md:overflow-visible md:snap-none">
           {plans.map((plan) => (
             <div
               key={plan.name}
               className="surface relative flex h-full min-w-[280px] flex-col snap-start overflow-hidden p-6 transition-all duration-200 hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
             >
-              {plan.popular ? (
-                <div className="absolute right-4 top-4 inline-flex items-center gap-1 rounded-full bg-purple-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
-                  <span aria-hidden>⚡</span> Most popular
-                </div>
-              ) : null}
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm uppercase tracking-[0.18em] text-slate-400">{plan.tagline}</p>
+              <div>
+                <p className="text-sm uppercase tracking-[0.18em] text-slate-400">{plan.tagline}</p>
+                <div className="flex items-center gap-2">
                   <h3 className="text-2xl font-semibold text-white">{plan.name}</h3>
+                  {plan.popular ? (
+                    <span className="inline-flex items-center gap-1 rounded-full bg-purple-500 px-2 py-0.5 text-xs font-semibold text-white shadow-lg">
+                      <span aria-hidden>⚡</span> Popular
+                    </span>
+                  ) : null}
                 </div>
               </div>
 
@@ -181,7 +196,7 @@ export function Pricing() {
                 </span>
                 {plan.monthly !== null ? <span className="text-sm text-slate-400">/mo</span> : null}
               </div>
-              <p className="text-sm text-slate-400">{plan.monthly === null ? "Tailored billing" : savingsLabel}</p>
+              <p className="text-sm text-slate-400">{plan.monthly === null ? "Tailored billing" : plan.monthly === 0 ? "Free forever" : savingsLabel}</p>
               <p className="mt-1 text-xs font-mono text-slate-500">{plan.tasks}</p>
 
               <div className="mt-5 space-y-3 text-sm text-slate-200">
@@ -194,12 +209,12 @@ export function Pricing() {
               </div>
 
               <div className="mt-auto pt-6">
-                <a
-                  className={`btn w-full ${plan.name === "Enterprise" ? "btn-secondary" : "btn-primary"}`}
-                  href={plan.name === "Enterprise" ? "#contact" : "#signup"}
+                <button
+                  disabled
+                  className="btn w-full cursor-not-allowed opacity-50 bg-slate-700 text-slate-400 border-slate-600"
                 >
-                  {plan.cta}
-                </a>
+                  Coming soon
+                </button>
               </div>
             </div>
           ))}

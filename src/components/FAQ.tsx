@@ -10,9 +10,9 @@ const faqs = [
       "We’ll keep your agents running and apply metered overage at your plan’s per-task rate, then reset at the next billing period. You can set guardrails or auto-upgrade to avoid surprises.",
   },
   {
-    question: "Can I upgrade from Free to Pro mid-cycle?",
+    question: "Can I upgrade from Free to Pro?",
     answer:
-      "Yes. Upgrades take effect immediately and prorate the remaining days in your cycle. Agents and projects unlock instantly without needing to reconfigure tokens.",
+      "Yes. Upgrades take effect immediately. Your billing cycle starts the day you upgrade, and all features unlock instantly.",
   },
   {
     question: "Do unused tasks roll over?",
@@ -75,7 +75,6 @@ export function FAQ() {
                 <div className="flex items-center justify-between gap-4 px-5 py-4">
                   <div>
                     <h3 className="text-lg font-semibold text-white">{item.question}</h3>
-                    <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Single-open accordion</p>
                   </div>
                   <motion.div
                     animate={{ rotate: isOpen ? 0 : 0, color: isOpen ? "#8b5cf6" : "#cbd5e1" }}
@@ -95,10 +94,7 @@ export function FAQ() {
                       transition={{ duration: prefersReducedMotion ? 0 : 0.2, ease: "easeOut" }}
                     >
                       <div className="px-5 pb-5 text-slate-300" id={contentId}>
-                        {item.answer}{" "}
-                        <a className="text-cyan-200 underline-offset-4 hover:underline" href="#" onClick={(e) => e.stopPropagation()}>
-                          Read docs
-                        </a>
+                        {item.answer}
                       </div>
                     </motion.div>
                   ) : null}

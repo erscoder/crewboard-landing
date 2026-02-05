@@ -1,0 +1,6 @@
+name = "crewboard-landing"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "SUBSCRIBERS"
+id = "1e838f620df344b88f6660ed4778273d"

@@ -83,7 +83,6 @@ export function Hero() {
               Watch demo
             </a>
           </div>
-          <p className="text-sm text-slate-400">No credit card needed · 14-day Pro trial included</p>
         </motion.div>
 
         <motion.div
