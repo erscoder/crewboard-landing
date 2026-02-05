@@ -1,6 +1,6 @@
 // @ts-nocheck
 interface Env {
-  SUBSCRIBERS: any;
+  WAITLIST_KV: any;
 }
 
 export const onRequestPost = async (context: { request: Request; env: Env }) => {
@@ -18,7 +18,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
     }
     
     // Store with timestamp
-    await env.SUBSCRIBERS.put(email, JSON.stringify({
+    await env.WAITLIST_KV.put(email, JSON.stringify({
       email,
       subscribedAt: new Date().toISOString()
     }));
