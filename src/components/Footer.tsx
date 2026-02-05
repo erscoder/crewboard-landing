@@ -26,18 +26,16 @@ export function Footer() {
     
     setStatus("loading");
     try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+      const formData = new FormData();
+      formData.append("email", email);
       
-      if (res.ok) {
-        setStatus("success");
-        setEmail("");
-      } else {
-        setStatus("error");
-      }
+      await fetch("https://script.google.com/macros/s/AKfycbwoisJv-8i7qPYwnsOO_k1u-MqmUrfuXBmnuhAoYn5e8hLLSqzdZngV3CWJO872iya__A/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      });
+      setStatus("success");
+      setEmail("");
     } catch {
       setStatus("error");
     }
