@@ -61,6 +61,13 @@ const agents: Agent[] = [
     bio: "Community builder. Sara manages your social presence, engages followers, schedules posts, and keeps your brand voice consistent everywhere.",
     accent: "from-fuchsia-500/30 to-purple-500/30",
   },
+  {
+    name: "Kike",
+    role: "CEO",
+    avatar: "/team/kike-ceo.png",
+    bio: "CEO of the company. Kike is the founder and CEO of the company. He is responsible for the overall direction and success of the company.",
+    accent: "from-blue-500/30 to-black-500/30",
+  },
 ];
 
 export function Team() {
