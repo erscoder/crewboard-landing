@@ -64,7 +64,7 @@ const agents: Agent[] = [
   {
     name: "Kike",
     role: "CEO",
-    avatar: "/team/kike-ceo.png",
+    avatar: "/team/kike.png",
     bio: "CEO of the company. Kike is the founder and CEO of the company. He is responsible for the overall direction and success of the company.",
     accent: "from-blue-500/30 to-black-500/30",
   },
@@ -76,7 +76,7 @@ export function Team() {
   return (
     <section id="team">
       <div className="container">
-        <div className="mb-10 flex flex-col gap-3 text-center">
+        <div className="mb-10 flex flex-col gap-3 text-center items-center">
           <span className="pill mx-auto">Meet the crew</span>
           <h2 className="text-3xl sm:text-4xl">AI agents that work like teammates</h2>
           <p className="mx-auto max-w-2xl text-slate-300">
