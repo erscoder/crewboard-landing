@@ -52,7 +52,7 @@ const agents: Agent[] = [
   {
     name: "Vega",
     role: "QA & Code Reviewer",
-    avatar: "/team/quinn-qa.png",
+    avatar: "/team/vega-v2.png",
     bio: "Nothing ships without Vega's approval. She breaks things on purpose, reviews every PR, and catches the bugs you didn't know existed. Quality is her obsession.",
     accent: "from-amber-500/30 to-orange-500/30",
   },
