@@ -200,7 +200,7 @@ export function Pricing() {
               <p className="text-sm text-slate-400">{plan.monthly === null ? "Tailored billing" : plan.monthly === 0 ? "Free forever" : savingsLabel}</p>
               <p className="mt-1 text-xs font-mono text-slate-500">{plan.tasks}</p>
 
-              <div className="mt-5 space-y-3 text-sm text-slate-200">
+              <div className="mt-5 flex-1 space-y-3 text-sm text-slate-200">
                 {plan.features.map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <CheckIcon />
