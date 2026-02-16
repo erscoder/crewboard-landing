@@ -77,6 +77,7 @@ const plans: Plan[] = [
       "Unlimited projects",
       "All available agents",
       "Unlimited tasks",
+      "GitHub, Slack & Telegram",
       "Priority response time",
       "Dedicated support",
     ],
