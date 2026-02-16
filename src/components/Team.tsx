@@ -53,7 +53,7 @@ const agents: Agent[] = [
     name: "Vega",
     role: "QA & Code Reviewer",
     avatar: "/team/quinn-qa.png",
-    bio: "Nothing ships without Vega's approval. She breaks things on purpose, reviews every PR, and writes the docs that make onboarding painless. Quality is her obsession.",
+    bio: "Nothing ships without Vega's approval. She breaks things on purpose, reviews every PR, and catches the bugs you didn't know existed. Quality is her obsession.",
     accent: "from-amber-500/30 to-orange-500/30",
   },
   {
