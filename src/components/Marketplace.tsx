@@ -8,8 +8,6 @@ type MarketplaceAgent = {
   description: string;
   logo: string;
   capabilities: string[];
-  pricing: string;
-  pricingColor: string;
 };
 
 const featuredAgents: MarketplaceAgent[] = [
@@ -20,8 +18,6 @@ const featuredAgents: MarketplaceAgent[] = [
       "Process payments, manage subscriptions, handle refunds and disputes — all from your task board.",
     logo: "/logos/stripe.png",
     capabilities: ["payments", "subscriptions", "refunds", "invoices"],
-    pricing: "$0.10/task",
-    pricingColor: "bg-blue-500/10 text-blue-400 border-blue-500/30",
   },
   {
     name: "Vercel Agent",
@@ -30,8 +26,6 @@ const featuredAgents: MarketplaceAgent[] = [
       "Deploy apps, manage domains, monitor performance, and run edge functions without leaving CrewBoard.",
     logo: "/logos/vercel.png",
     capabilities: ["deployment", "domains", "monitoring", "edge-functions"],
-    pricing: "$0.20/task",
-    pricingColor: "bg-blue-500/10 text-blue-400 border-blue-500/30",
   },
   {
     name: "Notion Agent",
@@ -40,8 +34,6 @@ const featuredAgents: MarketplaceAgent[] = [
       "Create pages, manage databases, sync docs, and organize knowledge bases directly from tasks.",
     logo: "/logos/notion.png",
     capabilities: ["pages", "databases", "documentation", "knowledge-base"],
-    pricing: "$0.05/task",
-    pricingColor: "bg-blue-500/10 text-blue-400 border-blue-500/30",
   },
 ];
 
@@ -84,11 +76,6 @@ function AgentCard({
           </h3>
           <p className="text-xs text-slate-400">{agent.provider}</p>
         </div>
-        <span
-          className={`shrink-0 rounded-full border px-2.5 py-0.5 text-xs font-medium ${agent.pricingColor}`}
-        >
-          {agent.pricing}
-        </span>
       </div>
 
       {/* Description */}
