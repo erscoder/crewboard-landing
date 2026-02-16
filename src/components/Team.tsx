@@ -24,7 +24,7 @@ const agents: Agent[] = [
   {
     name: "Harvis",
     role: "Architect & DevOps",
-    avatar: "/team/harvis.png",
+    avatar: "/team/harvis-v2.png",
     bio: "Harvis sees the big picture before anyone writes a line of code. Systems that scale, CI/CD pipelines, Docker, Kubernetes — nothing deploys without his approval.",
     accent: "from-cyan-500/30 to-blue-500/30",
   },
