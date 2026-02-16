@@ -5,8 +5,8 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 const navItems = [
   { label: "Product", href: "#features" },
+  { label: "Marketplace", href: "#marketplace" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Docs", href: "#" },
   { label: "FAQ", href: "#faq" },
 ];
 
