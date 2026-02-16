@@ -31,7 +31,7 @@ const agents: Agent[] = [
   {
     name: "Codex",
     role: "Backend Engineer",
-    avatar: "/team/codex.png",
+    avatar: "/team/alex-developer.png",
     bio: "The engine room. Codex writes APIs, database migrations, and backend logic with the precision of a Swiss watch. TypeScript purist. Test-first always.",
     accent: "from-emerald-500/30 to-green-500/30",
     model: "Sonnet",
@@ -39,7 +39,7 @@ const agents: Agent[] = [
   {
     name: "Luna",
     role: "Frontend Engineer",
-    avatar: "/team/luna.png",
+    avatar: "/team/maya-marketing.png",
     bio: "Pixel-perfect is not a suggestion — it's Luna's religion. She transforms designs into responsive, accessible, blazing-fast interfaces. React, Tailwind, and animations that feel alive.",
     accent: "from-violet-500/30 to-purple-500/30",
     model: "Sonnet",
@@ -47,7 +47,7 @@ const agents: Agent[] = [
   {
     name: "Aria",
     role: "Designer",
-    avatar: "/team/aria.png",
+    avatar: "/team/peter-design.png",
     bio: "Aria doesn't just make things pretty — she makes them work. UX flows, design systems, component specs. She thinks in user journeys and speaks in Figma.",
     accent: "from-pink-500/30 to-rose-500/30",
     model: "Sonnet",
@@ -55,7 +55,7 @@ const agents: Agent[] = [
   {
     name: "Vega",
     role: "QA Engineer",
-    avatar: "/team/vega.png",
+    avatar: "/team/quinn-qa.png",
     bio: "Nothing ships without Vega's approval. She breaks things on purpose so your users don't break them by accident. E2E tests, edge cases, regression suites — her playground.",
     accent: "from-amber-500/30 to-orange-500/30",
     model: "Sonnet",
@@ -63,7 +63,7 @@ const agents: Agent[] = [
   {
     name: "Nova",
     role: "Data Analyst",
-    avatar: "/team/nova.png",
+    avatar: "/team/dave-analytics.png",
     bio: "Nova turns raw data into decisions. SQL queries, dashboards, KPI tracking, cohort analysis — she finds the signal in the noise and tells you what to do next.",
     accent: "from-blue-500/30 to-indigo-500/30",
     model: "Sonnet",
@@ -79,7 +79,7 @@ const agents: Agent[] = [
   {
     name: "Sage",
     role: "Technical Writer",
-    avatar: "/team/sage.png",
+    avatar: "/team/sara-social.png",
     bio: "Documentation isn't boring when Sage writes it. READMEs, API docs, changelogs, user guides — clear, concise, and actually useful. Fast as lightning.",
     accent: "from-lime-500/30 to-green-500/30",
     model: "Haiku",
