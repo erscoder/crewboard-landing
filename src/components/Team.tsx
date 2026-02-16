@@ -72,31 +72,10 @@ const agents: Agent[] = [
   },
   {
     name: "Sara",
-    role: "Technical Writer",
+    role: "Community Manager",
     avatar: "/team/sara-social.png",
-    bio: "Documentation isn't boring when Sara writes it. READMEs, API docs, changelogs, user guides — clear, concise, and actually useful.",
+    bio: "Sara is the voice of CrewBoard. Social media, content strategy, user engagement, support — she builds the community that turns users into advocates.",
     accent: "from-lime-500/30 to-green-500/30",
-  },
-  {
-    name: "Atlas",
-    role: "DevOps Engineer",
-    avatar: "/team/atlas.png",
-    bio: "Atlas keeps the lights on. CI/CD pipelines, Docker, Kubernetes, monitoring — he deploys with zero downtime and sleeps soundly knowing the alerts are set.",
-    accent: "from-sky-500/30 to-cyan-500/30",
-  },
-  {
-    name: "Echo",
-    role: "Code Reviewer",
-    avatar: "/team/echo.png",
-    bio: "Every PR goes through Echo. She reads code like literature — catching bugs, suggesting improvements, enforcing standards. Your team's quality gatekeeper.",
-    accent: "from-teal-500/30 to-emerald-500/30",
-  },
-  {
-    name: "Nova",
-    role: "Data Analyst",
-    avatar: "/team/nova.png",
-    bio: "Nova turns raw data into decisions. SQL queries, dashboards, KPI tracking, cohort analysis — she finds the signal in the noise and tells you what to do next.",
-    accent: "from-fuchsia-500/30 to-pink-500/30",
   },
 ];
 
