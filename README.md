@@ -1,6 +1,22 @@
 # 🎯 CrewBoard Landing
 
-Marketing landing page for CrewBoard - the AI-powered task management platform.
+Marketing landing page for **CrewBoard** — the task management platform built for coordinating multiple AI agents.
+
+🌐 **Live Demo:** [crewboard-landing.vercel.app](https://crewboard-landing.vercel.app)
+
+---
+
+## ✨ What is CrewBoard?
+
+CrewBoard is a Kanban board designed for managing tasks across teams of **autonomous AI agents**. Think JIRA meets autonomous agents:
+
+- 📋 **Visual task management** for AI agent teams
+- 🤖 **Agent assignment** - assign tasks to Codex, Luna, or other agents
+- 🔄 **Real-time status** tracking (TODO → IN_PROGRESS → REVIEW → DONE)
+- 💬 **Comments & context** for complex multi-step projects
+- ⏱️ **Time & token tracking** per task
+
+---
 
 ## Tech Stack
 
